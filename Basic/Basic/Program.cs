@@ -34,8 +34,11 @@ namespace Basic
             //Exercise23();
             //Exercise24();
             //Exercise25();
-            Exercise26();
-
+            //Exercise26();
+            //Exercise27();
+            //Exercise28();
+            //Exercise29();
+            Exercise30();
             Console.ReadKey();
         }
 
@@ -508,5 +511,67 @@ namespace Basic
             }
         }
 
+        //Write a C# program to get the largest value between the first and last element of an array (length 3) of integers.
+        static void Exercise27()
+        {
+            int[] arr = { 1, 2, 5, 7, 8 };
+            Console.WriteLine("Array1: [{0}]", string.Join(", ", arr));
+            int max = arr[1];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (max < arr[i])
+                {
+                    max = arr[i];
+                }
+            }
+            Console.WriteLine("Highest value between first and last values of the said array: " + max);
+        }
+
+        //Write a C# program to create a new array of length containing the middle elements of three arrays (each length 3) of integers.
+        static void Exercise28()
+        {
+            int[] arr1 = { 1, 2, 5 };
+            int[] arr2 = { 0, 3, 8 };
+            int[] arr3 = { -1, 0, 2 };
+            int[] arr4 = { arr1[1], arr2[1], arr3[1] };
+
+            Console.WriteLine("Array1: [{0}]", string.Join(", ", arr1));
+            Console.WriteLine("Array2: [{0}]", string.Join(", ", arr2));
+            Console.WriteLine("Array3: [{0}]", string.Join(", ", arr3));
+            Console.WriteLine("New Array: [{0}]", string.Join(", ", arr4));
+        }
+
+        //Write a C# program to check if a given string is a palindrome or not.
+        static void Exercise29()
+        {
+            Console.WriteLine("Input a string: ");
+            string s = Console.ReadLine();
+            if (string.IsNullOrEmpty(s))
+            {
+                return;
+            }
+            char[] arr = s.ToCharArray();
+            int left = 0;
+            int right = arr.Length - 1;
+            while (left < right)
+            {
+                if (arr[left] != arr[right])
+                {
+                    Console.WriteLine("False");
+                    return;
+                }
+                left++;
+                right--;
+            }
+            Console.WriteLine("True");
+        }
+
+        //Write a C# Sharp program that takes a decimal number as input and displays its equivalent in binary form.
+        static void Exercise30()
+        {
+            Console.Write("Input a integer: ");
+            int input = int.Parse(Console.ReadLine());
+            Console.WriteLine("Binary: " + Convert.ToString(input, 2));
+        }
     }
 }

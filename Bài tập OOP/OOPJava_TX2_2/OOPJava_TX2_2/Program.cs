@@ -12,14 +12,15 @@ namespace OOPJava_TX2_2
             // mang dong quan ly Employee
             List<Employee> employees = new List<Employee>()
             {
-                new Employee { Name = "John Doe", Address = "US", Salary = 100 },
-                new Employee { Name = "Jane Smith", Address = "UK", Salary = 101 }
+                new Employee() { Name = "John Doe", Address = "US", Salary = 100 },
+                new Employee() { Name = "Jane Smith", Address = "UK", Salary = 101 }
             };
+            
             // mang dong quan ly Customer
             List<Customer> customers = new List<Customer>()
             {
-                new Customer { Name = "Alice Brown", Address = "Australia", Balance = 100 },
-                new Customer { Name = "Bob Johnson", Address = "Australia", Balance = 50 },
+                new Customer() { Name = "Alice Brown", Address = "Australia", Balance = 100 },
+                new Customer() { Name = "Bob Johnson", Address = "Australia", Balance = 50 },
             };
 
             Console.WriteLine("<---------------Menu--------------->");

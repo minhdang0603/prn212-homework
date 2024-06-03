@@ -8,7 +8,8 @@ namespace OOPJava_TX2_2
 {
     internal class Customer : Person
     {
-        public int Balance {  get; set; }
+        public int Balance { get; set; }
+
 
         public override void display()
         {

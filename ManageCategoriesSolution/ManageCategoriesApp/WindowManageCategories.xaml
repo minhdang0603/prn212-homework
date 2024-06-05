@@ -23,7 +23,7 @@
                      Text="{Binding Path=CategoryID, Mode=OneWay}"
                      DataContext="{Binding ElementName=lvCategories, Path=SelectedItem}"/>
             <Label Name="lblCategoryName" Content="Category Name"/>
-            <TextBox Name="txtCategoryName" Height="25" IsReadOnly="True"
+            <TextBox Name="txtCategoryName" Height="25"
                      Width="300" HorizontalAlignment="Left"
                      Text="{Binding Path=CategoryName, Mode=OneWay}"
                      DataContext="{Binding ElementName=lvCategories, Path=SelectedItem}"/>

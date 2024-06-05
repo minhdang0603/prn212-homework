@@ -30,7 +30,6 @@ namespace ManageCategoriesApp
 
         private void LoadCategories()
         {
-            lvCategories.Items.Clear();
             lvCategories.ItemsSource = categories.GetCategories();
         }
 

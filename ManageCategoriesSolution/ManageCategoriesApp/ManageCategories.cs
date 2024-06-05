@@ -55,7 +55,7 @@ namespace ManageCategoriesApp
         public void InsertCategory(Category category)
         {
             connection = new SqlConnection(ConnectionString);
-            string SQL = "Insert Categories value(@CategoryName)";
+            string SQL = "Insert Categories values(@CategoryName)";
             command = new SqlCommand(SQL, connection);
             command.Parameters.AddWithValue("@CategoryName", category.CategoryName);
             try
@@ -78,8 +78,9 @@ namespace ManageCategoriesApp
             connection = new SqlConnection(ConnectionString);
             string SQL = "Update Categories set CategoryName = @CategoryName where CategoryID = @CategoryID";
             command = new SqlCommand(SQL, connection);
-            command.Parameters.AddWithValue("@CategoryName", category.CategoryName);
+
             command.Parameters.AddWithValue("@CategoryID", category.CategoryID);
+            command.Parameters.AddWithValue("@CategoryName", category.CategoryName);
             try
             {
                 connection.Open();
